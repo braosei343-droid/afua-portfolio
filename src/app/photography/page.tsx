@@ -12,13 +12,7 @@ export default function PhotographyPage() {
     <div className="section-shell py-14 sm:py-20">
       <div className="max-w-2xl">
         <p className="eyebrow">Photography</p>
-        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">
-          Places observed in passing light
-        </h1>
-        <p className="mt-5 text-ink-soft">
-          Curated albums from the Chevening year and architectural journeys across the UK —
-          Liverpool, Manchester, Scotland, Cambridge, and more.
-        </p>
+        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">Pictures</h1>
       </div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -38,11 +32,10 @@ export default function PhotographyPage() {
               />
             </div>
             <div className="p-5">
-              <h2 className="display text-3xl text-ink group-hover:text-accent">{album.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{album.summary}</p>
-              <p className="mt-4 text-xs tracking-wide text-accent uppercase">
-                {album.images.length} images
-              </p>
+              <h2 className="text-xl font-medium text-ink group-hover:text-accent">{album.title}</h2>
+              {album.summary ? (
+                <p className="mt-2 text-sm leading-relaxed text-muted">{album.summary}</p>
+              ) : null}
             </div>
           </Link>
         ))}

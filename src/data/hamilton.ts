@@ -73,4 +73,11 @@ The building is in a healthy condition even though it shows subtle evidence of w
   },
   acknowledgements:
     "The University of Liverpool through its research collaboration offered this volunteering opportunity. Our professor Dr. Haniyeh Mohammadpourkarbasi guided us throughout all stages. The Principal Heritage Officer of Wirral Council opened this opportunity for the volunteers to learn.",
+  bibliography: [
+    "Society for the Protection of Ancient Buildings (no date) Energy efficiency in old buildings. Available at: https://www.spab.org.uk/advice/energy-efficiency-old-buildings",
+    "Historic Scotland (2014) INFORM: Improving energy efficiency in traditional buildings. Edinburgh: Historic Scotland. Available at: https://www.historicenvironment.scot/publications/all/publication/?publicationId=246ff4ae-1483-452a-8fb3-a59500bd05d5",
+    "Changeworks (2008) Energy heritage: a guide to improving energy efficiency in traditional and historic homes. Edinburgh: Changeworks.",
+    "Historic England (2026) Adapting historic buildings for energy and carbon efficiency: Historic England Advice Note 18. Swindon: Historic England. Available at: https://historicengland.org.uk/images-books/publications/adapting-historic-buildings-energy-carbon-efficiency-advice-note-18/",
+    "Sefton Council (no date) Guide to improving energy efficiency in Sefton's historic homes. Southport: Sefton Council.",
+  ],
 } as const;

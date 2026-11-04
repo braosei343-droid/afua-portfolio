@@ -9,14 +9,8 @@ export default function ArtPage() {
   return (
     <div className="section-shell py-14 sm:py-20">
       <div className="max-w-2xl">
-        <p className="eyebrow">Art explorations</p>
-        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">
-          Material, mark, and movement
-        </h1>
-        <p className="mt-5 text-ink-soft">
-          Paper marbling, pottery, pencil sketches, print patterns, and more — a studio practice
-          that sits beside architecture and climate research.
-        </p>
+        <p className="eyebrow">Art</p>
+        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">Art Explorations</h1>
       </div>
       <div className="mt-10">
         <ArtGallery />

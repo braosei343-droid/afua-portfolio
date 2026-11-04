@@ -10,13 +10,7 @@ export default function ContactPage() {
     <div className="section-shell py-14 sm:py-20">
       <div className="max-w-2xl">
         <p className="eyebrow">Contact</p>
-        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">
-          Let’s begin a conversation
-        </h1>
-        <p className="mt-5 text-ink-soft">
-          For teaching collaborations, research conversations, architectural enquiries, or
-          speaking invitations — reach out directly.
-        </p>
+        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">Contact</h1>
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -31,7 +25,7 @@ export default function ContactPage() {
           href={`tel:${site.phone.replace(/\s/g, "")}`}
           className="rounded-sm border border-[var(--line)] bg-surface p-7 transition hover:border-accent"
         >
-          <p className="eyebrow">Phone</p>
+          <p className="eyebrow">Phone Contact</p>
           <p className="mt-3 text-xl text-ink">{site.phone}</p>
         </a>
       </div>
@@ -44,8 +38,7 @@ export default function ContactPage() {
           className="rounded-sm border border-[var(--line)] bg-surface p-7 transition hover:border-accent"
         >
           <p className="eyebrow">LinkedIn</p>
-          <p className="mt-3 text-xl text-ink">View profile</p>
-          <p className="mt-2 text-sm text-muted">Professional network & updates</p>
+          <p className="mt-3 text-xl text-ink">LinkedIn</p>
         </a>
         <a
           href={site.socials.ngo}
@@ -53,12 +46,10 @@ export default function ContactPage() {
           rel="noreferrer"
           className="rounded-sm border border-[var(--line)] bg-surface p-7 transition hover:border-accent"
         >
-          <p className="eyebrow">NGO</p>
+          <p className="eyebrow">Nyansapo Sustainability Initiative</p>
           <p className="mt-3 text-xl text-ink">{site.socials.ngoLabel}</p>
-          <p className="mt-2 text-sm text-muted">Visit organisation website</p>
         </a>
       </div>
-      <p className="mt-8 text-sm text-muted">Based in {site.location}</p>
     </div>
   );
 }

@@ -135,6 +135,17 @@ export default function NetZeroHamiltonPage() {
         <h2 className="display text-3xl text-ink">Acknowledgements</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted">{hamilton.acknowledgements}</p>
       </div>
+
+      <div className="section-shell mt-12 max-w-3xl">
+        <h2 className="display text-3xl text-ink">Bibliography</h2>
+        <ul className="mt-5 space-y-3 text-sm leading-relaxed text-muted">
+          {hamilton.bibliography.map((item) => (
+            <li key={item} className="border-t border-[var(--line)] pt-3">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </article>
   );
 }

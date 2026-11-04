@@ -11,9 +11,7 @@ export default function AboutPage() {
     <div className="section-shell py-14 sm:py-20">
       <div className="max-w-3xl">
         <p className="eyebrow">About</p>
-        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">
-          Architect. Educator. Climate thinker.
-        </h1>
+        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">Profile</h1>
         <p className="mt-3 text-sm text-muted">
           Afua Ampomah-Amoako <span className="text-ink-soft">(née: Afua Boatemaa-Oti)</span>
         </p>
@@ -50,22 +48,22 @@ export default function AboutPage() {
           <ul className="mt-5 space-y-6">
             {[
               {
-                school: "University of Liverpool",
-                meta: "Department of Architecture · 2024–2025",
+                school: "University of Liverpool (2024 –2025)",
+                meta: "Department of Architecture",
                 detail:
-                  "MSc. Climate Resilience and Environmental Sustainability in Architecture. Thesis: From Vernacular to Net-Zero Energy: A Case Study of Passive Strategies in Accra’s Nearly Net-Zero Energy Building as a Model for Climate-Responsive Architecture in Ghana.",
+                  "MSc. Climate Resilience and Environmental Sustainability in Architecture. Thesis: From Vernacular to Net-Zero Energy: A Case Study of Passive Strategies in Accra’s Nearly Net-Zero Energy Building as a Model for Climate-Responsive Architecture in Ghana",
               },
               {
-                school: "KNUST",
-                meta: "Department of Architecture · 2010–2013",
+                school: "Kwame Nkrumah University of Science and Technology (KNUST) (2010 - 2013)",
+                meta: "Department of Architecture",
                 detail:
-                  "Master of Architecture. Thesis: Veterinary Medical Centre Design; Analysis of Spatial Requirements in Ghana.",
+                  "Master of Architecture. Thesis: Veterinary Medical Centre Design; Analysis of Spatial Requirements in Ghana",
               },
               {
-                school: "KNUST",
-                meta: "Department of Architecture · 2006–2010",
+                school: "Kwame Nkrumah University of Science and Technology (KNUST) (2006 - 2010)",
+                meta: "Department of Architecture",
                 detail:
-                  "Bachelor of Science, Architecture — Second Class Upper Division. Dissertation: Fire Safety and the Egress System of Students Halls of Residence, Kwame Nkrumah University of Science and Technology, Kumasi.",
+                  "Bachelor of Science, Architecture – Second Class Upper Division. Dissertation: Fire Safety and the Egress System of Students Halls of Residence, Kwame Nkrumah University of Science and Technology, Kumasi.",
               },
             ].map((item) => (
               <li key={item.detail} className="border-t border-[var(--line)] pt-4">
@@ -81,7 +79,7 @@ export default function AboutPage() {
           <p className="eyebrow">Professional membership</p>
           <ul className="mt-5 space-y-6">
             <li className="border-t border-[var(--line)] pt-4 text-sm leading-relaxed text-ink-soft">
-              Ghana Institute of Architects — Associate Member (2016)
+              Ghana Institute of Architects, Associate Member (2016)
             </li>
           </ul>
 
@@ -146,7 +144,7 @@ export default function AboutPage() {
             </a>
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            <span className="font-medium text-ink">2024 — Book chapter</span>
+            <span className="font-medium text-ink">2024 - Contribution to Book Chapter</span>
             <br />
             Docomomo International,{" "}
             <a
@@ -158,16 +156,15 @@ export default function AboutPage() {
               <em>Modernism in Africa</em>
               <span aria-hidden="true" className="ml-1 text-[0.7em] no-underline">↗</span>
             </a>{" "}
-            — The Architecture of Angola, Ghana, Mozambique, Nigeria, Rwanda, Sudan, Tanzania,
+            – The Architecture of Angola, Ghana, Mozambique, Nigeria, Rwanda, Sudan, Tanzania,
             Uganda.
             <br />
-            Chapter: GAEC Clubhouse, Kwabenya (1960–1966).
-            <br />
+            Chapter Contribution: GAEC Clubhouse Kwabenya (1960-1966){" "}
             <a
               href="https://drive.google.com/file/d/16IKsW6HlPXM320D7vxn-hzN4rcxHnXOW/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
-              className="mt-1 inline-flex max-w-full items-center gap-1 break-all font-medium text-accent underline underline-offset-2 decoration-accent/50 transition hover:decoration-accent"
+              className="inline-flex max-w-full items-center gap-1 break-all font-medium text-accent underline underline-offset-2 decoration-accent/50 transition hover:decoration-accent"
             >
               https://drive.google.com/file/d/16IKsW6HlPXM320D7vxn-hzN4rcxHnXOW/view?usp=sharing
               <span aria-hidden="true" className="shrink-0 text-[0.7em] no-underline">↗</span>
@@ -200,48 +197,44 @@ export default function AboutPage() {
         <p className="eyebrow">Award & scholarship</p>
         <ul className="mt-5 space-y-4 text-sm leading-relaxed text-ink-soft">
           <li className="border-t border-[var(--line)] pt-4">
-            Chevening Scholarship — 2024/2025 Cohort, University of Liverpool
+            Chevening Scholarship – 2024/2025 Cohort: University of Liverpool
           </li>
         </ul>
       </section>
 
       <section className="mt-16 max-w-3xl">
-        <p className="eyebrow">Volunteering & part-time employment</p>
+        <p className="eyebrow">Volunteering and part time employment</p>
         <ul className="mt-5 space-y-5 text-sm leading-relaxed text-ink-soft">
           <li className="border-t border-[var(--line)] pt-4">
-            <span className="font-medium text-ink">Panel Member</span> — Chevening Speaker Series:
-            Our Rivers, Our Future: Illegal Mining, Flooding and the Urgent Case for Environmental
-            Accountability — Chevening Association of Ghana, Accra (October 2026).
+            Panel Member, Chevening Speaker Series - Our Rivers, Our Future: Illegal Mining,
+            Flooding and the Urgent Case for Environmental Accountability - Chevening Association of
+            Ghana, Accra, October 2026.
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            <span className="font-medium text-ink">Student Volunteer</span> — Wirral Council,
-            Liverpool, February 2025 – June 2025. Project: A Net Zero Hamilton Square. Mapping out
-            conservation area, study of target buildings and drafting Energy Efficiency Guidance for
-            historic buildings.
+            Student Volunteer: Wirral Council, Liverpool, February 2025 – June 2025. Project: A Net
+            Zero Hamilton Square. Mapping out conservation area, study of target buildings and
+            drafting Energy Efficiency Guidance for historic buildings
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            <span className="font-medium text-ink">IELTS Examination Invigilator</span> (Part Time) —
-            International House Test Assessment, Liverpool and Manchester Area (Mar–Oct 2025).
+            IELTS Examination Invigilator (Part Time) – International House Test Assessment,
+            Liverpool and Manchester Area (March 2025 – October 2025)
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            <span className="font-medium text-ink">Participant</span> — University of Liverpool
-            Winter School Students Competition: Exploring the Integration of Generative AI in
-            Architectural Pedagogy: Unveiling the Impacts on Creativity (2025).
+            Participant – University of Liverpool Winter School Students Competition, Exploring the
+            Integration of Generative AI in Architectural Pedagogy: Unveiling the Impacts on
+            Creativity (2025)
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            <span className="font-medium text-ink">Exhibition contributions</span> — Proximity
-            Photography Exhibition, Open Eye Gallery, Liverpool (2025); University of Liverpool
-            Department of Architecture Students Exhibition (2025).
+            Exhibition Contributions – Proximity Photography Exhibition, Open Eye Gallery, Liverpool
+            (2025) – University of Liverpool Department of Architecture Students Exhibition, (2025)
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            <span className="font-medium text-ink">Resource Person</span> — Puoriyela Wood Works:
-            TVET Practical Training of Woodworkers in using AutoCAD and SketchUp to boost
-            productivity, Wa, Upper West, Ghana (December 2023).
+            Resource Person – Puoriyela Wood Works: TVET Practical Training of Woodworkers in using
+            AutoCAD and SketchUp to boost productivity, Wa, Upper West, Ghana (December 2023)
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            <span className="font-medium text-ink">Intern/Research Assistant</span> — KNUST
-            Development Office: Research on the requirements and design of KNUST Veterinary
-            Hospital (May 2012 – August 2012).
+            Intern/Research Assistant – KNUST Development Office: Research on the requirements and
+            design of KNUST Veterinary Hospital (May 2012 – August 2012)
           </li>
         </ul>
       </section>

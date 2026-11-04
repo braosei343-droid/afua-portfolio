@@ -11,7 +11,7 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "chevening-journey",
     title: "Chevening Journey",
-    summary: "Welcome, study, and farewell moments from the Chevening Scholarship year in the UK.",
+    summary: "Chevening Journey",
     cover: "/images/photography/chevening-journey/Chevening-PO-Visit.jpg",
     images: [
       { src: "/images/photography/chevening-journey/Chevening-PO-Visit.jpg", alt: "Chevening PO Visit" },
@@ -27,19 +27,19 @@ export const photoAlbums: PhotoAlbum[] = [
     title: "Starship Site Visit",
     summary:
       "Construction methods have taken a new turn and starship has changed the game with their simple and easy to assemble net zero-carbon homes.",
-    cover: "/images/photography/starship-site-visit/starship-01.jpg",
-    caption: "Construction methods have taken a new turn and starship has changed the game with their simple and easy to assemble net zero-carbon homes. Key lessons learned from this visit include Energy Efficiency, incorporating advanced insulation, windows and air-tight construction to minimize heat loss. Sustainable materials: The construction of the net-zero homes incorporated natural bio-based, low-carbon materials that minimizes environmental impact. Smart technology: integration of technologies to automatically adjust lighting, heating and cooling systems. It was impressive to see an industrial scale production of buildings.",
+    cover: "/images/photography/starship-site-visit/20241205_161222.jpg",
+    caption: "Construction methods have taken a new turn and starship has changed the game with their simple and easy to assemble net zero-carbon homes.Key lessons learned from this visit include Energy Efficiency, incorporating advanced insulation, windows and air-tight construction to minimize heat loss.Sustainable materials: The construction of the net-zero homes incorporated natural bio-based, low-carbon materials that minimizes environmental impact. Smart technology: integration of technologies to automatically adjust lighting, heating and cooling systems. It was impressive to see an industrial scale production of buildings.",
     images: [
-      { src: "/images/photography/starship-site-visit/starship-01.jpg", alt: "Starship production hall" },
-      { src: "/images/photography/starship-site-visit/starship-02.jpg", alt: "Net-zero home assembly" },
-      { src: "/images/photography/starship-site-visit/starship-03.jpg", alt: "Construction systems" },
-      { src: "/images/photography/starship-site-visit/starship-04.jpg", alt: "Completed module detail" },
+      { src: "/images/photography/starship-site-visit/20241205_161222.jpg", alt: "20241205_161222" },
+      { src: "/images/photography/starship-site-visit/20241205_161355.jpg", alt: "20241205_161355" },
+      { src: "/images/photography/starship-site-visit/20241205_161531.jpg", alt: "20241205_161531" },
+      { src: "/images/photography/starship-site-visit/20241205_162118.jpg", alt: "20241205_162118" },
     ],
   },
   {
     slug: "glasgow-edinburgh",
     title: "Glasgow & Edinburgh",
-    summary: "Galleries, monuments, museums, and city textures across Scotland’s two great centres of culture.",
+    summary: "Glasgow and Edinburgh",
     cover: "/images/photography/glasgow-edinburgh/A-lot-to-see-at-the-National-Gallery.jpg",
     images: [
       { src: "/images/photography/glasgow-edinburgh/A-lot-to-see-at-the-National-Gallery.jpg", alt: "A lot to see at the National Gallery" },
@@ -86,7 +86,7 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "liverpool",
     title: "Liverpool",
-    summary: "Docks, cathedrals, parks, Anfield, Chinatown, and everyday architecture from a year living and studying in the city.",
+    summary: "Liverpool",
     cover: "/images/photography/liverpool/A-View-of-the-Dock.jpg",
     images: [
       { src: "/images/photography/liverpool/A-View-of-the-Dock.jpg", alt: "A View of the Dock" },
@@ -206,7 +206,7 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "cambridge-punting",
     title: "Cambridge Punting",
-    summary: "River light, college backs, and the quiet geometry of Cambridge from the water.",
+    summary: "Cambridge Punting",
     cover: "/images/photography/cambridge-punting/IMG_20251101_154003.jpg",
     images: [
       { src: "/images/photography/cambridge-punting/IMG_20251101_154003.jpg", alt: "IMG 20251101 154003" },
@@ -232,7 +232,7 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "buckingham-palace",
     title: "Buckingham Palace",
-    summary: "A brief architectural pause at one of London’s most recognised civic landmarks.",
+    summary: "Buckingham Palace",
     cover: "/images/photography/buckingham-palace/IMG-20241214-WA0018---Copy.jpg",
     images: [
       { src: "/images/photography/buckingham-palace/IMG-20241214-WA0018---Copy.jpg", alt: "IMG 20241214 WA0018   Copy" },
@@ -242,7 +242,7 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "leicester",
     title: "Leicester",
-    summary: "City fragments and street atmospheres from a visit through Leicester.",
+    summary: "Leicester",
     cover: "/images/photography/leicester/IMG_20250530_131308_631.jpg",
     images: [
       { src: "/images/photography/leicester/IMG_20250530_131308_631.jpg", alt: "IMG 20250530 131308 631" },
@@ -253,7 +253,7 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "moments",
     title: "Moments",
-    summary: "Additional candid frames from the Chevening year.",
+    summary: "",
     cover: "/images/photography/moments/IMG-20250703-WA0089.jpg",
     images: [
       { src: "/images/photography/moments/IMG-20250703-WA0089.jpg", alt: "IMG 20250703 WA0089" },
@@ -265,11 +265,15 @@ export const photoAlbums: PhotoAlbum[] = [
     title: "Studio & Study",
     summary:
       "Great books that shape great minds. They were great insights during my Msc Dissertation writing.",
-    cover: "/images/photography/studio/great-books.jpg",
+    cover:
+      "/images/photography/studio/Great-books-that-shape-great-minds.-They-were-great-insights-during-my-Msc-Dissertation-writing.jpg",
     caption:
       "Great books that shape great minds. They were great insights during my Msc Dissertation writing.",
     images: [
-      { src: "/images/photography/studio/great-books.jpg", alt: "Great books that shape great minds" },
+      {
+        src: "/images/photography/studio/Great-books-that-shape-great-minds.-They-were-great-insights-during-my-Msc-Dissertation-writing.jpg",
+        alt: "Great books that shape great minds. They were great insights during my Msc Dissertation writing.",
+      },
     ],
   },
 ];
