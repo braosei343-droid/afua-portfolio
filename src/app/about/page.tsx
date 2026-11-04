@@ -15,11 +15,11 @@ export default function AboutPage() {
           Architect. Educator. Climate thinker.
         </h1>
         <p className="mt-3 text-sm text-muted">
-          Afua Ampomah-Amoako <span className="text-ink-soft">(née Afua Boatemaa-Oti)</span>
+          Afua Ampomah-Amoako <span className="text-ink-soft">(née: Afua Boatemaa-Oti)</span>
         </p>
         <div className="prose-site mt-8 space-y-5">
           <p>
-            I am a professional architect with experience in practice and academia. From 2012 to
+            I am a professional Architect with experience in practice and academia. From 2012 to
             2021 as a practicing architect, my projects encompassed residential enclave
             developments, commercial and hospitality projects. I have been a built environment
             faculty member at Accra Technical University since 2021. I contributed a chapter to
@@ -27,28 +27,18 @@ export default function AboutPage() {
           </p>
           <p>
             I am a Chevening Scholarship Award recipient which funded my MSc in Climate Resilience
-            and Environmental Sustainability in Architecture at the University of Liverpool. My
-            thesis,{" "}
-            <em>
-              From Vernacular to Net-Zero Energy: A Case Study of Passive Strategies in Accra’s
-              Nearly Net-Zero Energy Building as a Model for Climate-Responsive Architecture in
-              Ghana
-            </em>
-            , explores climate-responsive architecture grounded in Accra’s nearly net-zero
-            building.
-          </p>
-          <p>
-            In contributing to a climate-resilient Ghana, I co-founded{" "}
+            and Environmental Sustainability in Architecture at the University of Liverpool. In
+            contributing to a climate resilient Ghana, I co-founded{" "}
             <a
               href={site.socials.ngo}
               target="_blank"
               rel="noreferrer"
               className="font-medium text-accent underline-offset-2 hover:underline"
             >
-              Nyansapo Sustainability Initiative (NYANEX)
+              Nyansapo Sustainability Initiative
             </a>{" "}
             to foster a deep understanding of sustainable built environments through
-            industry–academia partnerships and mentorships. I have keen interests in fine art,
+            industry-academia partnerships and mentorships. I have keen interests in fine art,
             designing and culinary skills.
           </p>
         </div>
@@ -63,7 +53,7 @@ export default function AboutPage() {
                 school: "University of Liverpool",
                 meta: "Department of Architecture · 2024–2025",
                 detail:
-                  "MSc Climate Resilience and Environmental Sustainability in Architecture. Thesis: From Vernacular to Net-Zero Energy — A Case Study of Passive Strategies in Accra’s Nearly Net-Zero Energy Building as a Model for Climate-Responsive Architecture in Ghana.",
+                  "MSc. Climate Resilience and Environmental Sustainability in Architecture. Thesis: From Vernacular to Net-Zero Energy: A Case Study of Passive Strategies in Accra’s Nearly Net-Zero Energy Building as a Model for Climate-Responsive Architecture in Ghana.",
               },
               {
                 school: "KNUST",
@@ -101,32 +91,27 @@ export default function AboutPage() {
               {
                 title: "Co-Founder — Nyansapo Sustainability Initiative (NYANEX)",
                 detail:
-                  "Promoting a climate-resilient built environment, low-carbon materials, and renewable energy integration.",
+                  "Promoting a climate resilient built environment, low carbon materials and renewable energy integration.",
               },
               {
                 title: "Assistant Lecturer — Accra Technical University, Accra",
                 detail:
-                  "Faculty of Built Environment (Feb 2026–present). Teaching, research and mentoring students; development of syllabus, examination and grading.",
+                  "February 2026 – present. Faculty of built environment. Teaching, research and mentoring students; Development of syllabus, examination and grading.",
               },
               {
                 title: "Project Architect — Magear Construction Works, Accra",
                 detail:
-                  "Aug 2021–present. Design and preparation of permit drawings; construction supervision of residential and commercial projects.",
+                  "1st August 2021 – present. Design and preparation of permit drawings; Construction supervision of residential and commercial projects.",
               },
               {
                 title: "Architect — Architectural and Engineering Services Limited (AESL), Accra",
                 detail:
-                  "Jun 2016–May 2021. Preparation of drawings, site inspections, documentation and correspondence with consultants; Saglemi Housing project supervision.",
+                  "June 2016 – May 2021. Preparation of drawings, site inspections, documentation and correspondence with other consultants; Saglemi Housing project supervision.",
               },
               {
                 title: "Junior Architect — KEY Architectural Company, Accra",
                 detail:
-                  "Mar 2015–Apr 2016. Measured drawing; inspecting construction works; preparing site meeting minutes, weekly reports and other correspondence.",
-              },
-              {
-                title: "Intern / Research Assistant — KNUST Development Office",
-                detail:
-                  "May–Aug 2012. Research on the requirements and design of KNUST Veterinary Hospital.",
+                  "March 2015 – April 2016. Measured drawing; Inspecting construction works; Preparing site meeting minutes, weekly reports and other correspondence.",
               },
             ].map((item) => (
               <li key={item.title} className="border-t border-[var(--line)] pt-4">
@@ -230,9 +215,9 @@ export default function AboutPage() {
           </li>
           <li className="border-t border-[var(--line)] pt-4">
             <span className="font-medium text-ink">Student Volunteer</span> — Wirral Council,
-            Liverpool (Feb–Jun 2025). Project: A Net Zero Hamilton Square — mapping the conservation
-            area, studying target buildings, and drafting Energy Efficiency Guidance for historic
-            buildings.
+            Liverpool, February 2025 – June 2025. Project: A Net Zero Hamilton Square. Mapping out
+            conservation area, study of target buildings and drafting Energy Efficiency Guidance for
+            historic buildings.
           </li>
           <li className="border-t border-[var(--line)] pt-4">
             <span className="font-medium text-ink">IELTS Examination Invigilator</span> (Part Time) —
@@ -250,8 +235,13 @@ export default function AboutPage() {
           </li>
           <li className="border-t border-[var(--line)] pt-4">
             <span className="font-medium text-ink">Resource Person</span> — Puoriyela Wood Works:
-            TVET practical training of woodworkers in AutoCAD and SketchUp to boost productivity, Wa,
-            Upper West, Ghana (December 2023).
+            TVET Practical Training of Woodworkers in using AutoCAD and SketchUp to boost
+            productivity, Wa, Upper West, Ghana (December 2023).
+          </li>
+          <li className="border-t border-[var(--line)] pt-4">
+            <span className="font-medium text-ink">Intern/Research Assistant</span> — KNUST
+            Development Office: Research on the requirements and design of KNUST Veterinary
+            Hospital (May 2012 – August 2012).
           </li>
         </ul>
       </section>
@@ -259,7 +249,7 @@ export default function AboutPage() {
       <section className="mt-16 max-w-3xl">
         <p className="eyebrow">Interests</p>
         <p className="mt-4 border-t border-[var(--line)] pt-4 text-sm text-ink-soft">
-          Sketching, painting, and cooking.
+          Sketching, painting and cooking.
         </p>
       </section>
 

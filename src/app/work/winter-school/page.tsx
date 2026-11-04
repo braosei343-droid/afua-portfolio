@@ -18,8 +18,8 @@ export default function WinterSchoolPage() {
           Winter School Students Competition
         </h1>
         <p className="mt-4 text-ink-soft leading-relaxed">
-          Exploring the integration of generative AI in architectural pedagogy — unveiling
-          impacts on creativity through a collaborative student competition presentation.
+          Exploring the Integration of Generative AI in Architectural Pedagogy: Unveiling the
+          Impacts on Creativity.
         </p>
       </div>
       <div className="mt-10">

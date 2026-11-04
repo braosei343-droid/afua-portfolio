@@ -25,9 +25,10 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "starship-site-visit",
     title: "Starship Site Visit",
-    summary: "Industrial-scale production of net-zero homes — advanced insulation, airtight construction, bio-based materials, and smart environmental controls.",
+    summary:
+      "Construction methods have taken a new turn and starship has changed the game with their simple and easy to assemble net zero-carbon homes.",
     cover: "/images/photography/starship-site-visit/starship-01.jpg",
-    caption: "Construction methods have taken a new turn, and Starship has changed the game with simple, easy-to-assemble net-zero-carbon homes. Key lessons from this visit include energy efficiency through advanced insulation, windows and airtight construction; sustainable bio-based low-carbon materials; and smart technology that automatically adjusts lighting, heating and cooling. It was impressive to see industrial-scale production of buildings.",
+    caption: "Construction methods have taken a new turn and starship has changed the game with their simple and easy to assemble net zero-carbon homes. Key lessons learned from this visit include Energy Efficiency, incorporating advanced insulation, windows and air-tight construction to minimize heat loss. Sustainable materials: The construction of the net-zero homes incorporated natural bio-based, low-carbon materials that minimizes environmental impact. Smart technology: integration of technologies to automatically adjust lighting, heating and cooling systems. It was impressive to see an industrial scale production of buildings.",
     images: [
       { src: "/images/photography/starship-site-visit/starship-01.jpg", alt: "Starship production hall" },
       { src: "/images/photography/starship-site-visit/starship-02.jpg", alt: "Net-zero home assembly" },
@@ -169,9 +170,10 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "manchester",
     title: "Manchester",
-    summary: "Manchester Cathedral’s perpendicular gothic detail and Sinclair’s Oyster Bar at Shambles Square — heritage still alive in contemporary use.",
+    summary:
+      "Manchester Cathedral and Sinclair’s Oyster Bar at Shambles Square in Manchester.",
     cover: "/images/photography/manchester/IMG_20250607_161803.jpg",
-    caption: "Manchester Cathedral became a Cathedral in 1847. With distinct perpendicular architecture and fine detailed carvings of the 15th and 16th century, and post-war stained glass mimicking a gigantic glass mosaic, its outstanding elegance cannot be ignored.\n\nSinclair’s Oyster Bar at Shambles Square is a late 17th–18th century building that continues to function in contemporary life — busy with people enjoying a Saturday afternoon.",
+    caption: "This magnificent architectural masterpiece became a Cathedral in 1847. With a distinct perpendicular architecture and fine detailed carvings and engravings of the 15th and 16th century and post-war stained glass mimicking a gigantic glass mosaic, its outstanding elegance cannot be ignored (Association of English Cathedrals, n.d.).\n\nSINCLAIR’S OYSTER BAR at Shambles Square in Manchester is a late 17th century-18th century building that is perfectly functioning and enjoying contemporary lifestyles as can be seen in the number of people having a good time on a Saturday afternoon (Historic England, n.d.).",
     images: [
       { src: "/images/photography/manchester/IMG_20250607_161803.jpg", alt: "IMG 20250607 161803" },
       { src: "/images/photography/manchester/IMG_20250607_161837.jpg", alt: "IMG 20250607 161837" },
@@ -261,10 +263,13 @@ export const photoAlbums: PhotoAlbum[] = [
   {
     slug: "studio",
     title: "Studio & Study",
-    summary: "Great books that shaped great minds — companions during MSc dissertation writing.",
+    summary:
+      "Great books that shape great minds. They were great insights during my Msc Dissertation writing.",
     cover: "/images/photography/studio/great-books.jpg",
+    caption:
+      "Great books that shape great minds. They were great insights during my Msc Dissertation writing.",
     images: [
-      { src: "/images/photography/studio/great-books.jpg", alt: "great books" },
+      { src: "/images/photography/studio/great-books.jpg", alt: "Great books that shape great minds" },
     ],
   },
 ];

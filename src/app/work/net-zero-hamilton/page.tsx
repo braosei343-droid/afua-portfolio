@@ -7,6 +7,22 @@ export const metadata: Metadata = {
   title: "Net Zero Hamilton Square",
 };
 
+function Prose({ text }: { text: string }) {
+  return (
+    <div className="space-y-4">
+      {text
+        .split(/\n\n+/)
+        .map((para) => para.trim())
+        .filter(Boolean)
+        .map((para) => (
+          <p key={para.slice(0, 48)} className="text-ink-soft leading-relaxed whitespace-pre-wrap">
+            {para}
+          </p>
+        ))}
+    </div>
+  );
+}
+
 export default function NetZeroHamiltonPage() {
   return (
     <article className="pb-20">
@@ -44,38 +60,42 @@ export default function NetZeroHamiltonPage() {
       <div className="section-shell mt-16 grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-10">
           <section>
-            <h2 className="display text-3xl text-ink">Project overview</h2>
-            <p className="mt-4 text-ink-soft leading-relaxed">{hamilton.overview}</p>
+            <h2 className="display text-3xl text-ink">Project Overview</h2>
+            <div className="mt-4">
+              <Prose text={hamilton.overview} />
+            </div>
           </section>
           <section>
-            <h2 className="display text-3xl text-ink">Background & study area</h2>
-            <p className="mt-4 text-ink-soft leading-relaxed">{hamilton.background}</p>
+            <h2 className="display text-3xl text-ink">Background and Study Area</h2>
+            <div className="mt-4">
+              <Prose text={hamilton.background} />
+            </div>
           </section>
           <section>
-            <h2 className="display text-3xl text-ink">Stakeholder consultations</h2>
-            <p className="mt-4 text-ink-soft leading-relaxed">{hamilton.stakeholders}</p>
+            <h2 className="display text-3xl text-ink">Stakeholder Consultations and Site Meetings</h2>
+            <div className="mt-4">
+              <Prose text={hamilton.stakeholders} />
+            </div>
           </section>
         </div>
 
         <section className="rounded-sm border border-[var(--line)] bg-[rgba(244,247,244,0.7)] p-6 sm:p-8">
-          <h2 className="display text-3xl text-ink">Role & activities</h2>
-          <ul className="mt-5 space-y-4">
-            {hamilton.role.map((item) => (
-              <li key={item} className="border-t border-[var(--line)] pt-4 text-sm leading-relaxed text-ink-soft">
-                {item}
-              </li>
-            ))}
-          </ul>
+          <h2 className="display text-3xl text-ink">My Role and Activities as a Volunteer</h2>
+          <div className="mt-5">
+            <Prose text={hamilton.role} />
+          </div>
         </section>
       </div>
 
       <div className="section-shell mt-16">
-        <h2 className="display text-4xl text-ink">Draft energy efficiency guidance</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <h2 className="display text-4xl text-ink">Draft Energy Efficiency Guidance</h2>
+        <div className="mt-8 grid gap-8 md:grid-cols-2">
           {hamilton.guidance.map((block) => (
             <section key={block.title} className="border-t border-[var(--line)] pt-5">
               <h3 className="text-lg font-medium text-ink">{block.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{block.body}</p>
+              <div className="mt-3 text-sm [&_p]:text-muted">
+                <Prose text={block.body} />
+              </div>
             </section>
           ))}
         </div>
@@ -83,14 +103,16 @@ export default function NetZeroHamiltonPage() {
 
       <div className="section-shell mt-16 max-w-3xl">
         <h2 className="display text-4xl text-ink">Reflections</h2>
-        <p className="mt-5 text-ink-soft leading-relaxed">{hamilton.reflections}</p>
+        <div className="mt-5">
+          <Prose text={hamilton.reflections} />
+        </div>
       </div>
 
       <div className="section-shell mt-16">
         <h2 className="display text-4xl text-ink">{hamilton.buildingStudy.title}</h2>
-        <p className="mt-5 max-w-3xl text-ink-soft leading-relaxed">
-          {hamilton.buildingStudy.body}
-        </p>
+        <div className="mt-5 max-w-3xl">
+          <Prose text={hamilton.buildingStudy.body} />
+        </div>
         <div className="mt-8 columns-1 gap-3 sm:columns-2 lg:columns-3">
           {hamilton.buildingStudy.images.map((src) => (
             <div

@@ -62,8 +62,7 @@ export default function HomePage() {
               Practice, research, and making
             </h2>
             <p className="mt-4 text-ink-soft">
-              From MSc climate work and heritage retrofit volunteering to fine-art exploration —
-              each strand informs how I design for people and place.
+              I have keen interests in fine art, designing and culinary skills.
             </p>
           </div>
 

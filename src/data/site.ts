@@ -6,7 +6,7 @@ export const site = {
   phone: "+233 20 8566297",
   location: "Accra, Ghana",
   tagline:
-    "Architect and educator shaping climate-resilient built environments across practice, research, and community.",
+    "I am a professional Architect with experience in practice and academia.",
   socials: {
     linkedin: "https://www.linkedin.com/in/afua-a-76464015a/",
     ngo: "https://www.nyansaposustainabilityinitiative.org",
