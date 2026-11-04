@@ -19,15 +19,15 @@ export default function AboutPage() {
         </p>
         <div className="prose-site mt-8 space-y-5">
           <p>
-            A professional architect with experience in practice and academia. From 2012 to 2021,
-            her projects encompassed residential enclave developments, commercial, and hospitality
-            work. She has been a built-environment faculty member at Accra Technical University
-            since 2021, and contributed a chapter to Docomomo International’s book on Modernism in
-            Africa.
+            I am a professional architect with experience in practice and academia. From 2012 to
+            2021 as a practicing architect, my projects encompassed residential enclave
+            developments, commercial and hospitality projects. I have been a built environment
+            faculty member at Accra Technical University since 2021. I contributed a chapter to
+            Docomomo International’s book on Modernism in Africa.
           </p>
           <p>
-            As a Chevening Scholarship Award recipient, she completed an MSc in Climate Resilience
-            and Environmental Sustainability in Architecture at the University of Liverpool. Her
+            I am a Chevening Scholarship Award recipient which funded my MSc in Climate Resilience
+            and Environmental Sustainability in Architecture at the University of Liverpool. My
             thesis,{" "}
             <em>
               From Vernacular to Net-Zero Energy: A Case Study of Passive Strategies in Accra’s
@@ -38,7 +38,7 @@ export default function AboutPage() {
             building.
           </p>
           <p>
-            In contributing to a climate-resilient Ghana, she co-founded{" "}
+            In contributing to a climate-resilient Ghana, I co-founded{" "}
             <a
               href={site.socials.ngo}
               target="_blank"
@@ -46,12 +46,10 @@ export default function AboutPage() {
               className="font-medium text-accent underline-offset-2 hover:underline"
             >
               Nyansapo Sustainability Initiative (NYANEX)
-            </a>
-            {" "}
-            to foster deep understanding of sustainable built environments through industry–academia
-            partnerships and mentorships — promoting a climate-resilient built environment, low-carbon
-            materials, and renewable energy integration. Interests include sketching, painting,
-            designing, and cooking.
+            </a>{" "}
+            to foster a deep understanding of sustainable built environments through
+            industry–academia partnerships and mentorships. I have keen interests in fine art,
+            designing and culinary skills.
           </p>
         </div>
       </div>

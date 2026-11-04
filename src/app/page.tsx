@@ -63,7 +63,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-ink-soft">
               From MSc climate work and heritage retrofit volunteering to fine-art exploration —
-              each strand informs how Afua designs for people and place.
+              each strand informs how I design for people and place.
             </p>
           </div>
 
