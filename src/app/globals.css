@@ -11,6 +11,7 @@
   --surface-solid: #f4f7f4;
   --accent: #25564a;
   --accent-soft: #3f7a6a;
+  --on-accent: #f4f8f6;
   --sand: #c4b49a;
   --glow: rgba(37, 86, 74, 0.12);
   --background: var(--bg);
@@ -29,6 +30,7 @@
   --color-surface: var(--surface-solid);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
   --color-sand: var(--sand);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
@@ -148,7 +150,12 @@ img {
 .filter-chip[data-active="true"] {
   background: var(--accent);
   border-color: var(--accent);
-  color: #f7faf8;
+  color: var(--on-accent);
+}
+
+/* Soft white for text sitting on solid green accent surfaces */
+.on-accent {
+  color: var(--on-accent);
 }
 
 .lightbox-backdrop {

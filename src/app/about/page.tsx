@@ -3,14 +3,14 @@ import Link from "next/link";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Profile",
 };
 
 export default function AboutPage() {
   return (
     <div className="section-shell py-14 sm:py-20">
       <div className="max-w-3xl">
-        <p className="eyebrow">About</p>
+        <p className="eyebrow">Profile</p>
         <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">Profile</h1>
         <p className="mt-3 text-sm text-muted">
           Afua Ampomah-Amoako <span className="text-ink-soft">(née: Afua Boatemaa-Oti)</span>
@@ -249,7 +249,7 @@ export default function AboutPage() {
       <div className="mt-14 flex flex-wrap gap-3">
         <Link
           href="/work"
-          className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-[#f4f8f6]"
+          className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-on-accent"
         >
           See selected work
         </Link>

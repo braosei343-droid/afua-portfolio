@@ -15,8 +15,7 @@ export const site = {
 } as const;
 
 export const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "Profile" },
   { href: "/work", label: "Work" },
   { href: "/art", label: "Art" },
   { href: "/photography", label: "Photography" },

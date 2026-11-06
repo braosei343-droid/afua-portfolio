@@ -17,14 +17,16 @@ export default function WorkPage() {
       <div className="mt-14 grid gap-6 lg:grid-cols-2">
         <Link
           href="/work/net-zero-hamilton"
-          className="group relative overflow-hidden rounded-sm border border-[var(--line)] bg-[linear-gradient(145deg,#25564a,#1a3a32)] p-8 text-[#eef5f1] sm:p-10"
+          className="group relative overflow-hidden rounded-sm border border-[var(--line)] bg-[linear-gradient(145deg,#25564a,#1a3a32)] p-8 text-on-accent sm:p-10"
         >
-          <p className="text-xs tracking-[0.18em] text-[#b7d2c8] uppercase">Featured</p>
-          <h2 className="display mt-4 text-4xl">Towards a Net Zero Hamilton Square</h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-[#d5e6df]">
+          <p className="text-xs tracking-[0.18em] text-[#c5ddd4] uppercase">Featured</p>
+          <h2 className="display mt-4 text-4xl text-on-accent">
+            Towards a Net Zero Hamilton Square
+          </h2>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-[#e4efe9]">
             An MSc. student volunteer’s reflections
           </p>
-          <p className="mt-8 text-sm font-medium text-[#f4faf7]">
+          <p className="mt-8 text-sm font-medium text-on-accent">
             Open {String.fromCharCode(8594)}
           </p>
         </Link>

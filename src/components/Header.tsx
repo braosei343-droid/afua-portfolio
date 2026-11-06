@@ -33,7 +33,7 @@ export function Header() {
                 href={item.href}
                 className={`rounded-full px-3.5 py-2 text-sm transition ${
                   active
-                    ? "bg-accent text-[#f4f8f6]"
+                    ? "bg-accent text-on-accent"
                     : "text-ink-soft hover:bg-[rgba(37,86,74,0.08)]"
                 }`}
               >
@@ -62,16 +62,23 @@ export function Header() {
       {open && (
         <div className="border-t border-[var(--line)] bg-[rgba(244,247,244,0.98)] lg:hidden">
           <nav className="section-shell flex flex-col gap-1 py-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="rounded-xl px-3 py-3 text-base text-ink-soft hover:bg-[rgba(37,86,74,0.08)]"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const active = pathname.startsWith(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`rounded-xl px-3 py-3 text-base ${
+                    active
+                      ? "bg-accent text-on-accent"
+                      : "text-ink-soft hover:bg-[rgba(37,86,74,0.08)]"
+                  }`}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       )}

@@ -24,7 +24,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/work"
-                className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-[#f4f8f6] transition hover:bg-accent-soft"
+                className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-on-accent transition hover:bg-accent-soft"
               >
                 View work
               </Link>
