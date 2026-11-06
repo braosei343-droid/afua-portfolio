@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
 
@@ -9,36 +10,52 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="section-shell py-14 sm:py-20">
-      <div className="max-w-3xl">
-        <p className="eyebrow">Profile</p>
-        <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">Profile</h1>
-        <p className="mt-3 text-sm text-muted">
-          Afua Ampomah-Amoako <span className="text-ink-soft">(née: Afua Boatemaa-Oti)</span>
-        </p>
-        <div className="prose-site mt-8 space-y-5">
-          <p>
-            I am a professional Architect with experience in practice and academia. From 2012 to
-            2021 as a practicing architect, my projects encompassed residential enclave
-            developments, commercial and hospitality projects. I have been a built environment
-            faculty member at Accra Technical University since 2021. I contributed a chapter to
-            Docomomo International’s book on Modernism in Africa.
+      <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(16rem,0.75fr)] lg:gap-14">
+        <div className="max-w-3xl">
+          <p className="eyebrow">Profile</p>
+          <h1 className="display mt-3 text-5xl text-ink sm:text-6xl">{site.name}</h1>
+          <p className="mt-3 text-sm text-muted">
+            <span className="text-ink-soft">(née: Afua Boatemaa-Oti)</span>
           </p>
-          <p>
-            I am a Chevening Scholarship Award recipient which funded my MSc in Climate Resilience
-            and Environmental Sustainability in Architecture at the University of Liverpool. In
-            contributing to a climate resilient Ghana, I co-founded{" "}
-            <a
-              href={site.socials.ngo}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium text-accent underline-offset-2 hover:underline"
-            >
-              Nyansapo Sustainability Initiative
-            </a>{" "}
-            to foster a deep understanding of sustainable built environments through
-            industry-academia partnerships and mentorships. I have keen interests in fine art,
-            designing and culinary skills.
-          </p>
+          <div className="prose-site mt-8 space-y-5">
+            <p>
+              I am a professional Architect with experience in practice and academia. From 2012 to
+              2021 as a practicing architect, my projects encompassed residential enclave
+              developments, commercial and hospitality projects. I have been a built environment
+              faculty member at Accra Technical University since 2021. I contributed a chapter to
+              Docomomo International’s book on Modernism in Africa.
+            </p>
+            <p>
+              I am a Chevening Scholarship Award recipient which funded my MSc in Climate Resilience
+              and Environmental Sustainability in Architecture at the University of Liverpool. In
+              contributing to a climate resilient Ghana, I co-founded{" "}
+              <a
+                href={site.socials.ngo}
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-accent underline-offset-2 hover:underline"
+              >
+                Nyansapo Sustainability Initiative
+              </a>{" "}
+              to foster a deep understanding of sustainable built environments through
+              industry-academia partnerships and mentorships. I have keen interests in fine art,
+              designing and culinary skills.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative mx-auto w-full max-w-[340px] lg:mx-0 lg:max-w-none">
+          <div className="absolute -inset-3 rounded-[1.6rem] bg-[radial-gradient(circle_at_30%_20%,rgba(196,180,154,0.35),transparent_55%)]" />
+          <div className="relative aspect-[3/5] overflow-hidden rounded-[1.2rem] border border-[var(--line)] shadow-[0_24px_60px_rgba(24,32,29,0.14)]">
+            <Image
+              src="/images/hero/pix.jpg"
+              alt={`${site.name} portrait`}
+              fill
+              priority
+              className="object-cover object-[50%_18%]"
+              sizes="(max-width: 1024px) 80vw, 340px"
+            />
+          </div>
         </div>
       </div>
 

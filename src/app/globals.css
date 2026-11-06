@@ -61,8 +61,13 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+}
+
+/* Active nav on green: force soft white (beats unlayered link styles) */
+a.nav-active {
+  background: var(--accent);
+  color: #f4f8f6;
 }
 
 img {

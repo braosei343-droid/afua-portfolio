@@ -12,7 +12,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[rgba(231,235,230,0.82)] backdrop-blur-md">
       <div className="section-shell flex items-center justify-between gap-4 py-3.5">
-        <Link href="/" className="group min-w-0" onClick={() => setOpen(false)}>
+        <Link href="/about" className="group min-w-0" onClick={() => setOpen(false)}>
           <p className="display text-[1.35rem] text-ink sm:text-[1.55rem]">
             {site.name}
           </p>
@@ -30,7 +30,7 @@ export function Header() {
                 href={item.href}
                 className={`rounded-full px-3.5 py-2 text-sm transition ${
                   active
-                    ? "bg-accent text-on-accent"
+                    ? "nav-active"
                     : "text-ink-soft hover:bg-[rgba(37,86,74,0.08)]"
                 }`}
               >
@@ -67,7 +67,7 @@ export function Header() {
                   href={item.href}
                   className={`rounded-xl px-3 py-3 text-base ${
                     active
-                      ? "bg-accent text-on-accent"
+                      ? "nav-active"
                       : "text-ink-soft hover:bg-[rgba(37,86,74,0.08)]"
                   }`}
                   onClick={() => setOpen(false)}
