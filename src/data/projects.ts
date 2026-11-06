@@ -16,7 +16,7 @@ export const mscProjects: MscProject[] = [
   },
   {
     slug: "sustainable-construction-management",
-    title: "NET ZERO CARBON ; A",
+    title: "NET ZERO CARBON",
     summary: "MSc project — view-only PDF.",
     pdf: "/pdfs/msc/sustainable-construction-management.pdf",
     accent: "Construction",
@@ -57,7 +57,7 @@ export const featuredWork = [
     title: "MSc Academic Projects",
     eyebrow: "University of Liverpool",
     summary:
-      "Net Zero Energy Case Studies; NET ZERO CARBON ; A; Sustainable Students Accommodation; Climate Sensitive Shipping Containers; Designing for a Changing Climate.",
+      "Net Zero Energy Case Studies; NET ZERO CARBON; Sustainable Students Accommodation; Climate Sensitive Shipping Containers; Designing for a Changing Climate.",
   },
   {
     href: "/work/winter-school",

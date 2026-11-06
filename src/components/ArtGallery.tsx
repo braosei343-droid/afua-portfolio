@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useMemo, useState } from "react";
 import { artMediums, artPieces } from "@/data/art";
 import { Lightbox } from "./Lightbox";
+import { SmartImage } from "./SmartImage";
 
 export function ArtGallery() {
   const [medium, setMedium] = useState<string>("all");
@@ -49,7 +49,7 @@ export function ArtGallery() {
             onClick={() => setActive(index)}
           >
             <div className="relative aspect-[4/5] w-full">
-              <Image
+              <SmartImage
                 src={piece.src}
                 alt={piece.title}
                 fill

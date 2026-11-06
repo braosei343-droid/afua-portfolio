@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { Lightbox } from "./Lightbox";
+import { SmartImage } from "./SmartImage";
 
 type PhotoGridProps = {
   images: { src: string; alt: string }[];
@@ -21,7 +21,7 @@ export function PhotoGrid({ images }: PhotoGridProps) {
             className="group relative aspect-[4/3] overflow-hidden rounded-sm border border-[var(--line)] bg-surface"
             onClick={() => setActive(index)}
           >
-            <Image
+            <SmartImage
               src={image.src}
               alt={image.alt}
               fill

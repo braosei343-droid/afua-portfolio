@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import { SmartImage } from "./SmartImage";
 
 const slides = Array.from({ length: 18 }, (_, i) => `/images/winter-school/slide${i + 1}.jpg`);
 
@@ -11,13 +11,14 @@ export function SlideShow() {
   return (
     <div className="overflow-hidden rounded-sm border border-[var(--line)] bg-surface">
       <div className="relative aspect-[16/10] w-full bg-[rgba(24,32,29,0.06)]">
-        <Image
+        <SmartImage
           src={slides[index]}
           alt={`Winter School slide ${index + 1}`}
           fill
           className="object-contain"
           sizes="(max-width: 1024px) 100vw, 960px"
           priority
+          loadingLabel="Loading slide…"
         />
       </div>
       <div className="flex items-center justify-between gap-3 border-t border-[var(--line)] px-4 py-3">

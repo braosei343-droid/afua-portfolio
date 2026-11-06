@@ -180,3 +180,50 @@ img {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.media-loading {
+  background:
+    linear-gradient(
+      110deg,
+      rgba(231, 235, 230, 0.92) 25%,
+      rgba(244, 247, 244, 0.98) 40%,
+      rgba(231, 235, 230, 0.92) 55%
+    );
+  background-size: 200% 100%;
+  animation: mediaShimmer 1.4s ease-in-out infinite;
+}
+
+.media-loading-dark {
+  background:
+    linear-gradient(
+      110deg,
+      rgba(16, 22, 19, 0.96) 25%,
+      rgba(36, 48, 42, 0.98) 40%,
+      rgba(16, 22, 19, 0.96) 55%
+    );
+  background-size: 200% 100%;
+  animation: mediaShimmer 1.4s ease-in-out infinite;
+}
+
+.media-spinner {
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  border: 2px solid rgba(37, 86, 74, 0.2);
+  border-top-color: var(--accent);
+  animation: mediaSpin 0.75s linear infinite;
+}
+
+.media-spinner-dark {
+  border-color: rgba(244, 248, 246, 0.18);
+  border-top-color: rgba(244, 248, 246, 0.9);
+}
+
+@keyframes mediaShimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+@keyframes mediaSpin {
+  to { transform: rotate(360deg); }
+}

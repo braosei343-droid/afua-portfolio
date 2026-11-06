@@ -54,7 +54,7 @@ export default function WorkPage() {
           <p className="eyebrow">University of Liverpool</p>
           <h2 className="display mt-4 text-4xl text-ink group-hover:text-accent">MSc Projects</h2>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            Net Zero Energy Case Studies; NET ZERO CARBON ; A; Sustainable Students Accommodation;
+            Net Zero Energy Case Studies; NET ZERO CARBON; Sustainable Students Accommodation;
             Climate Sensitive Shipping Containers; Designing for a Changing Climate.
           </p>
           <p className="mt-8 text-sm font-medium text-accent">

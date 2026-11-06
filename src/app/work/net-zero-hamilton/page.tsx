@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { SmartImage } from "@/components/SmartImage";
 import { hamilton } from "@/data/hamilton";
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export default function NetZeroHamiltonPage() {
         {hamilton.heroImages.map((image) => (
           <figure key={image.src} className="overflow-hidden rounded-sm border border-[var(--line)] bg-surface">
             <div className="relative aspect-[4/3]">
-              <Image
+              <SmartImage
                 src={image.src}
                 alt={image.caption}
                 fill
@@ -119,7 +119,7 @@ export default function NetZeroHamiltonPage() {
               key={src}
               className="relative mb-3 aspect-[4/3] break-inside-avoid overflow-hidden rounded-sm border border-[var(--line)]"
             >
-              <Image
+              <SmartImage
                 src={src}
                 alt={`${hamilton.buildingStudy.title} documentation`}
                 fill

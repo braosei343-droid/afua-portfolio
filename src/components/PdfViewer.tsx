@@ -1,74 +1,39 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { MediaLoading } from "./MediaLoading";
 
 type PdfViewerProps = {
   src: string;
   title: string;
 };
 
-type PdfPage = {
-  getViewport: (params: { scale: number }) => { width: number; height: number };
-  render: (params: {
-    canvasContext: CanvasRenderingContext2D;
-    viewport: { width: number; height: number };
-    transform?: number[];
-  }) => { promise: Promise<void> };
-};
-
 type PdfDoc = {
   numPages: number;
-  getPage: (n: number) => Promise<PdfPage>;
-  destroy?: () => Promise<void>;
+  getPage: (n: number) => Promise<{
+    getViewport: (params: { scale: number }) => { width: number; height: number };
+    render: (params: {
+      canvasContext: CanvasRenderingContext2D;
+      viewport: { width: number; height: number };
+      transform?: number[];
+    }) => { promise: Promise<void> };
+  }>;
 };
 
 export function PdfViewer({ src, title }: PdfViewerProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [numPages, setNumPages] = useState(0);
-  const [readyPages, setReadyPages] = useState(0);
-  const [docLoading, setDocLoading] = useState(true);
+  const [renderedPages, setRenderedPages] = useState(0);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    let observer: IntersectionObserver | null = null;
-    let doc: PdfDoc | null = null;
-    const rendered = new Set<number>();
 
-    async function renderPage(
-      pdfPage: PdfPage,
-      canvas: HTMLCanvasElement,
-      containerWidth: number,
-    ) {
-      const unscaled = pdfPage.getViewport({ scale: 1 });
-      const isMobile = window.matchMedia("(max-width: 640px)").matches;
-      const maxScale = isMobile ? 1.25 : 1.75;
-      const scale = Math.min(containerWidth / unscaled.width, maxScale);
-      const viewport = pdfPage.getViewport({ scale });
-      const outputScale = Math.min(window.devicePixelRatio || 1, isMobile ? 1.5 : 2);
-
-      canvas.width = Math.floor(viewport.width * outputScale);
-      canvas.height = Math.floor(viewport.height * outputScale);
-      canvas.style.width = `${viewport.width}px`;
-      canvas.style.height = `${viewport.height}px`;
-
-      const context = canvas.getContext("2d");
-      if (!context) return;
-
-      const transform =
-        outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : undefined;
-
-      await pdfPage.render({
-        canvasContext: context,
-        viewport,
-        transform,
-      }).promise;
-    }
-
-    async function loadDocument() {
-      setDocLoading(true);
+    async function loadAndRender() {
+      setLoading(true);
       setError(null);
-      setReadyPages(0);
+      setRenderedPages(0);
       setNumPages(0);
 
       const host = scrollRef.current;
@@ -77,103 +42,77 @@ export function PdfViewer({ src, title }: PdfViewerProps) {
       try {
         const pdfjs = await import("pdfjs-dist");
         pdfjs.GlobalWorkerOptions.workerSrc = "/pdf-worker/pdf.worker.min.mjs";
-
-        doc = (await pdfjs.getDocument({
+        const doc = (await pdfjs.getDocument({
           url: src,
           disableAutoFetch: false,
           disableStream: false,
-          // Prefer range requests so phones can start sooner
-          disableRange: false,
         }).promise) as unknown as PdfDoc;
 
-        if (cancelled || !scrollRef.current) return;
-
+        if (cancelled) return;
         setNumPages(doc.numPages);
-        setDocLoading(false);
 
         const container = scrollRef.current;
-        const containerWidth = Math.max(container.clientWidth - 24, 280);
+        if (!container) return;
 
-        // Placeholder slots so users can scroll immediately
+        const containerWidth = Math.max(container.clientWidth - 24, 320);
+
         for (let pageNumber = 1; pageNumber <= doc.numPages; pageNumber += 1) {
-          const slot = document.createElement("div");
-          slot.dataset.page = String(pageNumber);
-          slot.className =
-            "mx-auto mb-4 flex min-h-[40vh] w-full max-w-full items-center justify-center last:mb-0";
-          slot.innerHTML =
-            '<p class="text-xs text-white/40">Page ' + pageNumber + "</p>";
-          container.appendChild(slot);
-        }
+          if (cancelled) return;
 
-        observer = new IntersectionObserver(
-          (entries) => {
-            for (const entry of entries) {
-              if (!entry.isIntersecting || cancelled || !doc) continue;
-              const el = entry.target as HTMLElement;
-              const pageNumber = Number(el.dataset.page);
-              if (!pageNumber || rendered.has(pageNumber)) continue;
-              rendered.add(pageNumber);
+          const pdfPage = await doc.getPage(pageNumber);
+          const unscaled = pdfPage.getViewport({ scale: 1 });
+          const scale = Math.min(containerWidth / unscaled.width, 2);
+          const viewport = pdfPage.getViewport({ scale });
+          const outputScale = window.devicePixelRatio || 1;
 
-              void (async () => {
-                try {
-                  const pdfPage = await doc!.getPage(pageNumber);
-                  if (cancelled) return;
+          const wrapper = document.createElement("div");
+          wrapper.className = "mx-auto mb-4 w-fit max-w-full last:mb-0";
 
-                  // Approximate height from first unscaled pass for layout stability
-                  const canvas = document.createElement("canvas");
-                  canvas.className = "max-w-full bg-white shadow-2xl";
-                  await renderPage(pdfPage, canvas, containerWidth);
-                  if (cancelled) return;
+          const canvas = document.createElement("canvas");
+          canvas.className = "max-w-full shadow-2xl bg-white";
+          canvas.width = Math.floor(viewport.width * outputScale);
+          canvas.height = Math.floor(viewport.height * outputScale);
+          canvas.style.width = `${viewport.width}px`;
+          canvas.style.height = `${viewport.height}px`;
 
-                  el.className = "mx-auto mb-4 w-fit max-w-full last:mb-0";
-                  el.replaceChildren(canvas);
-                  setReadyPages((n) => n + 1);
-                  observer?.unobserve(el);
-                } catch {
-                  el.innerHTML =
-                    '<p class="text-xs text-red-200">Could not render page ' +
-                    pageNumber +
-                    "</p>";
-                }
-              })();
-            }
-          },
-          {
-            root: container,
-            // Start loading a bit before the page enters view
-            rootMargin: "200px 0px",
-            threshold: 0.01,
-          },
-        );
+          const context = canvas.getContext("2d");
+          if (!context) continue;
 
-        for (const child of Array.from(container.children)) {
-          observer.observe(child);
+          const transform =
+            outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : undefined;
+
+          await pdfPage.render({
+            canvasContext: context,
+            viewport,
+            transform,
+          }).promise;
+
+          if (cancelled) return;
+          wrapper.appendChild(canvas);
+          container.appendChild(wrapper);
+          setRenderedPages(pageNumber);
         }
       } catch {
-        if (!cancelled) {
-          setError("Unable to open this document in the viewer.");
-          setDocLoading(false);
-        }
+        if (!cancelled) setError("Unable to open this document in the viewer.");
+      } finally {
+        if (!cancelled) setLoading(false);
       }
     }
 
-    void loadDocument();
-
+    loadAndRender();
     return () => {
       cancelled = true;
-      observer?.disconnect();
-      void doc?.destroy?.();
       if (scrollRef.current) scrollRef.current.innerHTML = "";
     };
   }, [src]);
 
-  const status = error
-    ? null
-    : docLoading
-      ? "Opening document…"
-      : readyPages < numPages
-        ? `Ready · ${readyPages}/${numPages} pages rendered`
-        : `${numPages} pages · scroll to view`;
+  const statusLabel = numPages
+    ? loading
+      ? `Loading ${renderedPages}/${numPages}…`
+      : `${numPages} pages · scroll to view`
+    : loading
+      ? "Loading PDF…"
+      : "—";
 
   return (
     <div
@@ -185,21 +124,24 @@ export function PdfViewer({ src, title }: PdfViewerProps) {
           <p className="truncate font-medium">{title}</p>
           <p className="text-xs text-white/55">Viewing only · download disabled in this portfolio</p>
         </div>
-        <p className="tabular-nums text-white/70">{status ?? "—"}</p>
+        <p className="tabular-nums text-white/70">{statusLabel}</p>
       </div>
 
-      <div className="relative bg-[#101613]">
-        {docLoading && (
-          <p className="pointer-events-none absolute top-4 left-1/2 z-10 -translate-x-1/2 rounded-full bg-black/50 px-3 py-1 text-xs text-white/80">
-            Opening document…
+      <div className="relative min-h-[min(70vh,720px)] bg-[#101613]">
+        {loading && renderedPages === 0 && !error ? (
+          <MediaLoading dark label="Loading PDF…" />
+        ) : null}
+        {loading && renderedPages > 0 ? (
+          <p className="pointer-events-none absolute top-4 left-1/2 z-10 -translate-x-1/2 rounded-full bg-black/55 px-3 py-1.5 text-xs tracking-wide text-white/85 uppercase">
+            Loading page {renderedPages} of {numPages}…
           </p>
-        )}
+        ) : null}
         {error ? (
           <p className="px-4 py-16 text-center text-sm text-red-200">{error}</p>
         ) : (
           <div
             ref={scrollRef}
-            className="max-h-[min(80vh,900px)] overflow-y-auto overscroll-contain p-3 sm:p-6"
+            className="max-h-[min(80vh,900px)] min-h-[min(70vh,720px)] overflow-y-auto overscroll-contain p-3 sm:p-6"
           />
         )}
       </div>

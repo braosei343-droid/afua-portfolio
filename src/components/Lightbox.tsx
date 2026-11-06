@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect } from "react";
+import { SmartImage } from "./SmartImage";
 
 type LightboxProps = {
   images: { src: string; alt: string }[];
@@ -37,13 +37,15 @@ export function Lightbox({ images, index, onClose, onPrev, onNext }: LightboxPro
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-black/30">
-          <Image
+          <SmartImage
             src={current.src}
             alt={current.alt}
             fill
             className="object-contain"
             sizes="(max-width: 1024px) 100vw, 1024px"
             priority
+            darkLoading
+            loadingLabel="Loading image…"
           />
         </div>
         <div className="flex w-full items-center justify-between gap-3 text-sm text-[#e8efe9]">

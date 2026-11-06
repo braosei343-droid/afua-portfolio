@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { SmartImage } from "@/components/SmartImage";
 import { photoAlbums } from "@/data/photography";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function PhotographyPage() {
             className="group overflow-hidden rounded-sm border border-[var(--line)] bg-surface"
           >
             <div className="relative aspect-[16/11] overflow-hidden">
-              <Image
+              <SmartImage
                 src={album.cover}
                 alt={album.title}
                 fill
