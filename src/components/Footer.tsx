@@ -7,8 +7,9 @@ export function Footer() {
       <div className="section-shell grid gap-8 py-12 md:grid-cols-[1.4fr_1fr]">
         <div>
           <p className="display text-3xl text-ink">{site.name}</p>
-          <p className="mt-3 text-[0.7rem] tracking-[0.14em] text-muted uppercase">
-            {site.title}
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
+            Architect, educator, and Chevening Scholar working at the intersection of
+            Vernacular Architecture, climate resilience, and creative practice.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
