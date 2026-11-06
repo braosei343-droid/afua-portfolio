@@ -140,8 +140,16 @@ export default function NetZeroHamiltonPage() {
         <h2 className="display text-3xl text-ink">Bibliography</h2>
         <ul className="mt-5 space-y-3 text-sm leading-relaxed text-muted">
           {hamilton.bibliography.map((item) => (
-            <li key={item} className="border-t border-[var(--line)] pt-3">
-              {item}
+            <li key={item.href} className="border-t border-[var(--line)] pt-3">
+              {item.text}{" "}
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="break-all font-medium text-accent underline underline-offset-2 decoration-accent/50 transition hover:decoration-accent"
+              >
+                {item.linkLabel}
+              </a>
             </li>
           ))}
         </ul>

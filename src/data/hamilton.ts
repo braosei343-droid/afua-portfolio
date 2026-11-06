@@ -9,15 +9,19 @@ export const hamilton = {
         "The stunning Monument to Queen Victoria (stone). Built in 1901, by Edmund Kirkby, an Architect. It is a Grade II listed heritage monument (1974) (Historic England, n.d.).",
     },
     {
-      src: "/images/hamilton/hamilton-02.jpg",
+      src: "/images/hamilton/hamilton-02-upright.jpg",
       caption: "My favourite spot at the Hamilton Square Garden",
     },
     {
       src: "/images/hamilton/hamilton-03.jpg",
+      caption: "My favourite spot at the Hamilton Square Garden",
+    },
+    {
+      src: "/images/hamilton/hamilton-04-upright.jpg",
       caption: "Birkenhead Town Hall",
     },
     {
-      src: "/images/hamilton/hamilton-04.jpg",
+      src: "/images/hamilton/hamilton-05-upright.jpg",
       caption:
         "Birkenhead Town Hall Interior – monumental stairs with ornate balustrade leading to a grand landing. Check the bright and beautiful stained glass art which is a focal point of the stairwell.",
     },
@@ -58,7 +62,6 @@ Parapet wall following the building’s geometry has elaborate modillion blocks 
 
 The building is in a healthy condition even though it shows subtle evidence of weathering on the ashlar stone surface, minimal algae growth visible on parapet wall and minor weathering of decorative elements of first storey windows.`,
     images: [
-      "/images/hamilton/hamilton-05.jpg",
       "/images/hamilton/hamilton-06.jpg",
       "/images/hamilton/hamilton-07.jpg",
       "/images/hamilton/hamilton-08.jpg",
@@ -74,10 +77,33 @@ The building is in a healthy condition even though it shows subtle evidence of w
   acknowledgements:
     "The University of Liverpool through its research collaboration offered this volunteering opportunity. Our professor Dr. Haniyeh Mohammadpourkarbasi guided us throughout all stages. The Principal Heritage Officer of Wirral Council opened this opportunity for the volunteers to learn.",
   bibliography: [
-    "Society for the Protection of Ancient Buildings (no date) Energy efficiency in old buildings. Available at: https://www.spab.org.uk/advice/energy-efficiency-old-buildings",
-    "Historic Scotland (2014) INFORM: Improving energy efficiency in traditional buildings. Edinburgh: Historic Scotland. Available at: https://www.historicenvironment.scot/publications/all/publication/?publicationId=246ff4ae-1483-452a-8fb3-a59500bd05d5",
-    "Changeworks (2008) Energy heritage: a guide to improving energy efficiency in traditional and historic homes. Edinburgh: Changeworks.",
-    "Historic England (2026) Adapting historic buildings for energy and carbon efficiency: Historic England Advice Note 18. Swindon: Historic England. Available at: https://historicengland.org.uk/images-books/publications/adapting-historic-buildings-energy-carbon-efficiency-advice-note-18/",
-    "Sefton Council (no date) Guide to improving energy efficiency in Sefton's historic homes. Southport: Sefton Council.",
+    {
+      text: "Society for the Protection of Ancient Buildings (no date) Energy efficiency in old buildings. Available at:",
+      href: "https://www.spab.org.uk/advice/energy-efficiency-old-buildings",
+      linkLabel: "https://www.spab.org.uk/advice/energy-efficiency-old-buildings",
+    },
+    {
+      text: "Historic Scotland (2014) INFORM: Improving energy efficiency in traditional buildings. Edinburgh: Historic Scotland. Available at:",
+      href: "https://www.historicenvironment.scot/publications/all/publication/?publicationId=246ff4ae-1483-452a-8fb3-a59500bd05d5",
+      linkLabel:
+        "https://www.historicenvironment.scot/publications/all/publication/?publicationId=246ff4ae-1483-452a-8fb3-a59500bd05d5",
+    },
+    {
+      text: "Changeworks (2008) Energy heritage: a guide to improving energy efficiency in traditional and historic homes. Edinburgh: Changeworks. Available at:",
+      href: "https://www.fuelpovertylibrary.info/sites/default/files/EAGA41%20%282008%29%20GUIDANCE%20Energy%20Heritage%20-%20A%20guide%20to%20improving%20energy%20efficiency%20in%20traditional%20and%20historic%20buildings.pdf",
+      linkLabel:
+        "EAGA41 (2008) GUIDANCE Energy Heritage - A guide to improving energy efficiency in traditional and historic buildings.pdf",
+    },
+    {
+      text: "Historic England (2026) Adapting historic buildings for energy and carbon efficiency: Historic England Advice Note 18. Swindon: Historic England. Available at:",
+      href: "https://historicengland.org.uk/images-books/publications/adapting-historic-buildings-energy-carbon-efficiency-advice-note-18/",
+      linkLabel:
+        "https://historicengland.org.uk/images-books/publications/adapting-historic-buildings-energy-carbon-efficiency-advice-note-18/",
+    },
+    {
+      text: "Sefton Council (no date) Guide to improving energy efficiency in Sefton's historic homes. Southport: Sefton Council. Available at:",
+      href: "https://www.sefton.gov.uk/media/6651/improve-energy-efficiency-historic-homes.pdf",
+      linkLabel: "improve-energy-efficiency-historic-homes.pdf",
+    },
   ],
 } as const;
