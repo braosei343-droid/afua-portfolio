@@ -23,7 +23,16 @@ export default function AboutPage() {
               2021 as a practicing architect, my projects encompassed residential enclave
               developments, commercial and hospitality projects. I have been a built environment
               faculty member at Accra Technical University since 2021. I contributed a chapter to
-              Docomomo International’s book on Modernism in Africa.
+              Docomomo International’s book on{" "}
+              <a
+                href="https://birkhauser.com/en/book/9783035628357"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-accent underline underline-offset-2 decoration-accent/50 transition hover:decoration-accent"
+              >
+                Modernism in Africa
+              </a>
+              .
             </p>
             <p>
               I am a Chevening Scholarship Award recipient which funded my MSc in Climate Resilience
@@ -59,78 +68,88 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="mt-16 grid gap-10 lg:grid-cols-2">
-        <section>
-          <p className="eyebrow">Education</p>
-          <ul className="mt-5 space-y-6">
-            {[
-              {
-                school: "University of Liverpool (2024 –2025)",
-                meta: "Department of Architecture",
-                detail:
-                  "MSc. Climate Resilience and Environmental Sustainability in Architecture. Thesis: From Vernacular to Net-Zero Energy: A Case Study of Passive Strategies in Accra’s Nearly Net-Zero Energy Building as a Model for Climate-Responsive Architecture in Ghana",
-              },
-              {
-                school: "Kwame Nkrumah University of Science and Technology (KNUST) (2010 - 2013)",
-                meta: "Department of Architecture",
-                detail:
-                  "Master of Architecture. Thesis: Veterinary Medical Centre Design; Analysis of Spatial Requirements in Ghana",
-              },
-              {
-                school: "Kwame Nkrumah University of Science and Technology (KNUST) (2006 - 2010)",
-                meta: "Department of Architecture",
-                detail:
-                  "Bachelor of Science, Architecture – Second Class Upper Division. Dissertation: Fire Safety and the Egress System of Students Halls of Residence, Kwame Nkrumah University of Science and Technology, Kumasi.",
-              },
-            ].map((item) => (
-              <li key={item.detail} className="border-t border-[var(--line)] pt-4">
-                <p className="font-medium text-ink">{item.school}</p>
-                <p className="mt-1 text-xs tracking-wide text-accent uppercase">{item.meta}</p>
-                <p className="mt-2 text-sm text-muted">{item.detail}</p>
+      <div className="mt-16 grid items-start gap-10 lg:grid-cols-2">
+        <div>
+          <section>
+            <p className="eyebrow">Education</p>
+            <ul className="mt-5 space-y-6">
+              {[
+                {
+                  school: "University of Liverpool (2024 –2025)",
+                  meta: "Department of Architecture",
+                  detail:
+                    "MSc. Climate Resilience and Environmental Sustainability in Architecture. Thesis: From Vernacular to Net-Zero Energy: A Case Study of Passive Strategies in Accra’s Nearly Net-Zero Energy Building as a Model for Climate-Responsive Architecture in Ghana",
+                },
+                {
+                  school: "Kwame Nkrumah University of Science and Technology (KNUST) (2010 - 2013)",
+                  meta: "Department of Architecture",
+                  detail:
+                    "Master of Architecture. Thesis: Veterinary Medical Centre Design; Analysis of Spatial Requirements in Ghana",
+                },
+                {
+                  school: "Kwame Nkrumah University of Science and Technology (KNUST) (2006 - 2010)",
+                  meta: "Department of Architecture",
+                  detail:
+                    "Bachelor of Science, Architecture – Second Class Upper Division. Dissertation: Fire Safety and the Egress System of Students Halls of Residence, Kwame Nkrumah University of Science and Technology, Kumasi.",
+                },
+              ].map((item) => (
+                <li key={item.detail} className="border-t border-[var(--line)] pt-4">
+                  <p className="font-medium text-ink">{item.school}</p>
+                  <p className="mt-1 text-xs tracking-wide text-accent uppercase">{item.meta}</p>
+                  <p className="mt-2 text-sm text-muted">{item.detail}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mt-8">
+            <p className="eyebrow">Professional membership</p>
+            <ul className="mt-5 space-y-6">
+              <li className="border-t border-[var(--line)] pt-4 text-sm leading-relaxed text-ink-soft">
+                Ghana Institute of Architects, Associate Member (2016)
               </li>
-            ))}
-          </ul>
-        </section>
+            </ul>
+          </section>
+        </div>
 
         <section>
-          <p className="eyebrow">Professional membership</p>
-          <ul className="mt-5 space-y-6">
-            <li className="border-t border-[var(--line)] pt-4 text-sm leading-relaxed text-ink-soft">
-              Ghana Institute of Architects, Associate Member (2016)
-            </li>
-          </ul>
-
-          <p className="eyebrow mt-10">Practice & roles</p>
+          <p className="eyebrow">Practice & roles</p>
           <ul className="mt-5 space-y-6">
             {[
               {
                 title: "Co-Founder — Nyansapo Sustainability Initiative (NYANEX)",
+                meta: "February 2026 – present",
                 detail:
-                  "Promoting a climate resilient built environment, low carbon materials and renewable energy integration.",
+                  "Promoting a climate resilient built environment and renewable energy integration.",
               },
               {
                 title: "Assistant Lecturer — Accra Technical University, Accra",
+                meta: "1st August 2021 – present",
                 detail:
-                  "February 2026 – present. Faculty of built environment. Teaching, research and mentoring students; Development of syllabus, examination and grading.",
+                  "Faculty of built environment. Teaching, research and mentoring students; Development of syllabus, examination and grading.",
               },
               {
                 title: "Project Architect — Magear Construction Works, Accra",
+                meta: "June 2016 – May 2021",
                 detail:
-                  "1st August 2021 – present. Design and preparation of permit drawings; Construction supervision of residential and commercial projects.",
+                  "Design and preparation of permit drawings; Construction supervision of residential and commercial projects.",
               },
               {
                 title: "Architect — Architectural and Engineering Services Limited (AESL), Accra",
+                meta: "March 2015 – April 2016",
                 detail:
-                  "June 2016 – May 2021. Preparation of drawings, site inspections, documentation and correspondence with other consultants; Saglemi Housing project supervision.",
+                  "Preparation of drawings, site inspections, documentation and correspondence with other consultants; Saglemi Housing project supervision.",
               },
               {
                 title: "Junior Architect — KEY Architectural Company, Accra",
+                meta: "Jun 2012 – August 2014",
                 detail:
-                  "March 2015 – April 2016. Measured drawing; Inspecting construction works; Preparing site meeting minutes, weekly reports and other correspondence.",
+                  "Measured drawing; Inspecting construction works; Preparing site meeting minutes, weekly reports and other correspondence.",
               },
             ].map((item) => (
               <li key={item.title} className="border-t border-[var(--line)] pt-4">
                 <p className="text-sm font-medium text-ink">{item.title}</p>
+                <p className="mt-1 text-xs tracking-wide text-accent uppercase">{item.meta}</p>
                 <p className="mt-1 text-sm leading-relaxed text-muted">{item.detail}</p>
               </li>
             ))}
@@ -220,38 +239,43 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-16 max-w-3xl">
-        <p className="eyebrow">Volunteering and part time employment</p>
+        <p className="eyebrow font-bold">Volunteering and part time role</p>
         <ul className="mt-5 space-y-5 text-sm leading-relaxed text-ink-soft">
           <li className="border-t border-[var(--line)] pt-4">
-            Panel Member, Chevening Speaker Series - Our Rivers, Our Future: Illegal Mining,
-            Flooding and the Urgent Case for Environmental Accountability - Chevening Association of
-            Ghana, Accra, October 2026.
+            <span className="font-bold text-ink">Panel Member</span>, Chevening Speaker Series - Our
+            Rivers, Our Future: Illegal Mining, Flooding and the Urgent Case for Environmental
+            Accountability - Chevening Association of Ghana, Accra, October 2026.
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            Student Volunteer: Wirral Council, Liverpool, February 2025 – June 2025. Project: A Net
-            Zero Hamilton Square. Mapping out conservation area, study of target buildings and
-            drafting Energy Efficiency Guidance for historic buildings
+            <span className="font-bold text-ink">Student Volunteer</span>: Wirral Council, Liverpool,
+            February 2025 – June 2025. Project: A Net Zero Hamilton Square. Mapping out conservation
+            area, study of target buildings and drafting Energy Efficiency Guidance for historic
+            buildings
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            IELTS Examination Invigilator (Part Time) – International House Test Assessment,
-            Liverpool and Manchester Area (March 2025 – October 2025)
+            <span className="font-bold text-ink">IELTS Examination Invigilator</span> (Part Time) –
+            International House Test Assessment, Liverpool and Manchester Area (March 2025 – October
+            2025)
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            Participant – University of Liverpool Winter School Students Competition, Exploring the
-            Integration of Generative AI in Architectural Pedagogy: Unveiling the Impacts on
-            Creativity (2025)
+            <span className="font-bold text-ink">Participant</span> – University of Liverpool Winter
+            School Students Competition, Exploring the Integration of Generative AI in Architectural
+            Pedagogy: Unveiling the Impacts on Creativity (2025)
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            Exhibition Contributions – Proximity Photography Exhibition, Open Eye Gallery, Liverpool
-            (2025) – University of Liverpool Department of Architecture Students Exhibition, (2025)
+            <span className="font-bold text-ink">Exhibition Contributions</span> – Proximity
+            Photography Exhibition, Open Eye Gallery, Liverpool (2025) – University of Liverpool
+            Department of Architecture Students Exhibition, (2025)
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            Resource Person – Puoriyela Wood Works: TVET Practical Training of Woodworkers in using
-            AutoCAD and SketchUp to boost productivity, Wa, Upper West, Ghana (December 2023)
+            <span className="font-bold text-ink">Resource Person</span> – Puoriyela Wood Works: TVET
+            Practical Training of Woodworkers in using AutoCAD and SketchUp to boost productivity,
+            Wa, Upper West, Ghana (December 2023)
           </li>
           <li className="border-t border-[var(--line)] pt-4">
-            Intern/Research Assistant – KNUST Development Office: Research on the requirements and
-            design of KNUST Veterinary Hospital (May 2012 – August 2012)
+            <span className="font-bold text-ink">Intern/Research Assistant</span> – KNUST Development
+            Office: Research on the requirements and design of KNUST Veterinary Hospital (May 2012 –
+            August 2012)
           </li>
         </ul>
       </section>
