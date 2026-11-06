@@ -1,6 +1,6 @@
 # Afua Ampomah-Amoako — Portfolio
 
-Professional portfolio for architect, educator, and Chevening Scholar Afua Ampomah-Amoako.
+Professional portfolio for Afua Ampomah-Amoako — Architect · Educator.
 
 ## Run locally
 
@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - **Work** — MSc PDF viewer (view-only), Net Zero Hamilton case study, Winter School slides
 - **Art** — filterable gallery
 - **Photography** — curated UK journey albums
-- **Contact** — email / phone; LinkedIn & NGO links pending in `src/data/site.ts`
+- **Contact** — form only (no public email/phone); LinkedIn & NGO in `src/data/site.ts`
 
 ## Add social links later
 

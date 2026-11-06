@@ -1,9 +1,9 @@
 export const site = {
   name: "Afua Ampomah-Amoako",
   shortName: "Afua",
-  title: "Architect · Educator · Climate Resilience",
+  title: "Architect · Educator",
+  /** Server-only fallback for contact form delivery — not shown on the site. */
   email: "ampomahamoako@gmail.com",
-  phone: "+233 20 8566297",
   location: "Accra, Ghana",
   tagline:
     "I am a professional Architect with experience in practice and academia.",

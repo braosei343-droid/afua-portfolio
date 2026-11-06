@@ -7,26 +7,20 @@ export function Footer() {
       <div className="section-shell grid gap-8 py-12 md:grid-cols-[1.4fr_1fr]">
         <div>
           <p className="display text-3xl text-ink">{site.name}</p>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
-            Architect, educator, and Chevening Scholar working at the intersection of
-            heritage, climate resilience, and creative practice.
+          <p className="mt-3 text-[0.7rem] tracking-[0.14em] text-muted uppercase">
+            {site.title}
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
           <div>
-            <p className="eyebrow">Connect</p>
+            <p className="eyebrow">Based in</p>
             <ul className="mt-3 space-y-2 text-sm text-ink-soft">
-              <li>
-                <a className="hover:text-accent" href={`mailto:${site.email}`}>
-                  {site.email}
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-accent" href={`tel:${site.phone.replace(/\s/g, "")}`}>
-                  {site.phone}
-                </a>
-              </li>
               <li>{site.location}</li>
+              <li>
+                <Link href="/contact" className="hover:text-accent">
+                  Send a message
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -49,11 +43,6 @@ export function Footer() {
                 ) : (
                   `${site.socials.ngoLabel} — link coming`
                 )}
-              </li>
-              <li>
-                <Link href="/contact" className="text-ink-soft hover:text-accent">
-                  Contact page
-                </Link>
               </li>
             </ul>
           </div>

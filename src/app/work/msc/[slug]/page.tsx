@@ -38,7 +38,7 @@ async function MscProjectContent({ params }: PageProps) {
 
   return (
     <div className="section-shell py-10 sm:py-14">
-      <Link href="/work#msc-projects" className="text-sm text-accent hover:underline">
+      <Link href="/work/msc" className="text-sm text-accent hover:underline">
         ← Back to MSc projects
       </Link>
       <div className="mt-6 max-w-3xl">
