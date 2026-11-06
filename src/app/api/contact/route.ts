@@ -50,8 +50,9 @@ export async function POST(request: Request) {
   const brevoKey = process.env.BREVO_API_KEY?.trim();
   const notifyEmail = process.env.CONTACT_TO_EMAIL?.trim() || site.email;
   const fromEmail =
-    process.env.CONTACT_FROM_EMAIL?.trim() || "portfolio@afua-ampomah.vercel.app";
-  const fromName = process.env.CONTACT_FROM_NAME?.trim() || site.name;
+    process.env.CONTACT_FROM_EMAIL?.trim() || "braosei343@gmail.com";
+  const fromName =
+    process.env.CONTACT_FROM_NAME?.trim() || `${site.name} · Portfolio`;
 
   try {
     if (brevoKey) {
